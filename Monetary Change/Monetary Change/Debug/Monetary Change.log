@@ -1,0 +1,3 @@
+﻿  Monetary Change.cpp
+d:\development\monetary change\monetary change\monetary change\monetary change.cpp(39): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+  Monetary Change.vcxproj -> D:\Development\Monetary Change\Monetary Change\Debug\Monetary Change.exe

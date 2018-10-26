@@ -1,0 +1,49 @@
+Monetary Change Version 1.0
+Program Development Document
+
+*************************
+FUNCTIONALITY
+*************************
+The monetary change program helps with dispensing monetary change
+in U.S. dollars by telling the user how many of each type of 
+coin to dispense (quarters, dimes, nickles, pennies) using the
+fewest coins possible
+
+-----------------------------------------------------------------
+
+************************
+ALGORITHM OVERVIEW
+************************
+-Launch program
+-Get user input for amount of money
+-Catch errors with user input
+-Seperate input into appropriate coins and return struct value
+-Print values to user
+-Ask user if he wants to repeat
+-Catch errors with user input
+
+-----------------------------------------------------------------
+
+************************
+POST DEVELOPMENT LESSONS
+************************
+-Computers use a binary representation for floating-point numbers. Most
+ non-integer decimal values can't be representated exactly as a binary 
+ fraction and are instead represented by the close approximation. Therefore
+ it is best to round to the nearest integer when performing a cast from 
+ floating-point to integer type. 
+
+-cin.fail() will detect whether a value entered is appropriate to the defined
+ variable type. If cin.fail() returns true then...
+	a) the entered value does not fit the variable
+	b) the variable will not be affected
+	c) the instream is broken
+	d) the entered value is still in the buffer and will be user for the 
+	   next cin >> variable statement
+	
+ To repair this issues
+	a) repair the instream via cin.clear()
+	b) clear the buffer with cin.ignore(std::numeric_limits<int>::max(), '\n');
+ 
+ Solution taken from http://www.cplusplus.com/forum/beginner/2957/
+
